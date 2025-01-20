@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="Plantoria - Your one-stop shop for plants and plant care equipment">
+    <title>Plantoria Plant Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main-content" class="plant-store-section">
+        <div class="hero-container-products">
+            <img src="./pics/toppic.jpg" class="hero-image-products"> 
+            
+            <!-- Navigation -->
+            <nav class="nav-container" role="navigation" aria-label="Main navigation">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-active" aria-current="page">START</a>
+                    <a href="products.html">PRODUCTS</a>
+                    <a href="aboutus.html">ABOUT US</a>
+                </div>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5fc6780ed3cf247413261987584482cf459c19c2a65ed76ec69a2081953d0224?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                     alt="Plantoria" class="logo">
+                <div class="nav-icons">
+                    <button aria-label="Search" class="icon">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1569bbf8b91dc68c07a75484a57f4b5bd793222dcca50c229861832f2f85a6e?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                             alt="" role="presentation">
+                    </button>
+                    <button aria-label="Shopping cart" class="icon">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6f27be20078178ff283a519cc9780523337aa2f709740785d2cf22f37269eba7?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                             alt="" role="presentation">
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="searchbar-container">
+                <form action="search.html" method="get" role="search">
+                    <div class="searchbar-wrapper">
+                        <input type="text" name="query" class="searchbar" placeholder="SEARCH FOR A SPECIFIC TYPE OF PLANT ..." aria-label="Search">
+                            <button type="submit" class="search-icon">
+                            <img src="./pics/search.png" alt="Search" class="search-icon-img">
+                            </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="vertical-line-products"></div>
+
+        <!-- Text Section -->
+        <section class="search-section">
+            <p class="quicksand-regular">LOOKING FOR SOMETHING SPECIFIC?</p>
+            <br>
+            <p>USE THE SEARCH BAR TO EXPLORE <br>A WIDE RANGE OF PLANT SPECIES,<br>FROM RARE GEMS TO POPULAR <br>FAVORITES - OR BROWSE THROUGH <br>THE IMAGES BELOW FOR INSPIRATION!</p>
+        </section>
+
+        <!--Filter Button -->
+        <button class="filter-button" id="filter-button">
+            <img src="./pics/filter.svg" width="25px" height="25px" alt="filtericon" class="button-icon">
+            FILTER
+        </button>  
+
+        <div class="filter-container">
+            <button class="close-button">
+                <img src="./pics/close.png" alt="Close" class="close-icon">
+            </button>
+
+            <!-- SIZE -->
+            <div class="filter-section">
+                <p class="quicksand-regular">SIZE</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="size-xs" />
+                    <label for="size-xs">XS</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="size-s" />
+                    <label for="size-s">S</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="size-m" />
+                    <label for="size-m">M</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="size-l" />
+                    <label for="size-l">L</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="size-xl" />
+                    <label for="size-xl">XL</label>
+                </div>
+            </div>
+        
+            <!-- FAMILY -->
+            <div class="filter-section">
+                <p class="quicksand-regular">FAMILY</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="family-caladium" />
+                    <label for="family-caladium">CALADIUM</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="family-drac" />
+                    <label for="family-drac">DRACAENA</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="family-monstera" />
+                    <label for="family-monstera">MONSTERA</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="family-philo" />
+                    <label for="family-philo">PHILODENDRON</label>
+                </div>
+            </div>
+        
+            <!-- LIGHT LOCATION -->
+            <div class="filter-section">
+                <p class="quicksand-regular">LIGHT LOCATION</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="light-sunny" />
+                    <label for="light-sunny">SUNNY</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="light-bright" />
+                    <label for="light-bright">BRIGHT</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="light-shady" />
+                    <label for="light-shady">SHADY</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="light-part" />
+                    <label for="light-part">PARTICIALLY SHADED</label>
+                </div>
+            </div>
+        
+            <!-- WATER NEEDS -->
+            <div class="filter-section">
+                <p class="quicksand-regular">WATER NEEDS</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="water-low" />
+                    <label for="water-low">LOW</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="water-moderate" />
+                    <label for="water-moderate">MODERATE</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" id="water-high" />
+                    <label for="water-high">HIGH</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- plants Section -->
+    <div class="plant-grid-container">
+      
+        <!-- Produkte -->
+        <section class="plant-grid" aria-label="plants">
+                
+                <!-- 1.Reihe --> 
+                <article class="plant-card">
+                    <a href="bird-plant.html">
+                        <img src="./pics/bird.jpg" alt="Bird of Paradise">
+                    </a>
+                    <p class="quicksand-regular">BIRD OF PARADISE</p>
+                    <p>STRELITZIA NICOLAI</p>
+                    <div class="price-and-button">
+                        <p class="price">34.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+            
+                <article class="plant-card">
+                    <a href="swiss.html" class="plant-link">
+                        <img src="./pics/swiss.jpg" alt="Swiss Cheese Plant">
+                    </a>
+                    <p class="quicksand-regular">SWISS CHEESE PLANT</p>
+                    <p>MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">32.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+            
+                <article class="plant-card">
+                    <a href="maranta.html" class="plant-link">
+                        <img src="./pics/maranta.jpg" alt="Maranta">
+                    </a>
+                    <p class="quicksand-regular">MARANTA 'FASCINATOR TRICOLOR'</p>
+                    <p>MARANTA LEUCONEURA</p>
+                    <div class="price-and-button">
+                        <p class="price">23.95€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+
+               <!-- 2.Reihe --> 
+                <article class="plant-card">
+                    <img src="./pics/mini.jpg" alt="Minima">
+                    <p class="quicksand-regular">MONSTERA MINIMA</p>
+                    <p>RHAPHIDOPHORA TETRASPERMA</p>
+                    <div class="price-and-button">
+                        <p class="price">18.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <img src="./pics/caladium.jpg" alt="paintedleaf">
+                    <p class="quicksand-regular">PAINTED LEAF</p>
+                    <p>CALADIUM BICOLOR</p>
+                    <div class="price-and-button">
+                        <p class="price">9.95€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <img src="./pics/dracaena.jpg" alt="dragontree">
+                    <p class="quicksand-regular">DRAGONTREE</p>
+                    <p>DRACAENA</p>
+                    <div class="price-and-button">
+                        <p class="price">22.95€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 3.Reihe --> 
+                <article class="plant-card">
+                    <img src="./pics/philo.jpg" alt="imperial">
+                    <p class="quicksand-regular">IMPERIAL RED</p>
+                    <p>PHILODENDRON</p>
+                    <div class="price-and-button">
+                        <p class="price">11.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <img src="./pics/deli.jpg" alt="deliciosa">
+                    <p class="quicksand-regular">DELICIOSA VARIEGATED</p>
+                    <p>MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">61.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card">
+                    <img src="./pics/thai.jpg" alt="thai">
+                    <p class="quicksand-regular">THAI CONSTELLATION</p>
+                    <p>MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">32.99€</p>
+                        <button>
+                            <img src="./pics/cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+        </section>
+    </div>
+
+   
+
+        <footer class="footer">
+            <p class="footer-text no-hover">
+                ©2025 PLANTORIA. ALL RIGHTS RESERVED.
+            </p>
+            <div class="footer-links">
+                <span class="footer-text hover-effect">IMPRINT</span>
+                <span class="footer-text hover-effect">PRIVACY POLICY</span>
+            </div>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

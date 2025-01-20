@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "name": "Strelitzia Nicolai (Bird of Paradise)",
+      "price": "34,99€",
+      "description": "The Strelitzia, commonly known as the Bird of Paradise, is a striking tropical plant native to South Africa. Its name comes from its exotic, bird-like flowers that bloom in vibrant shades of orange and blue.\nStrelitzia thrives in bright, indirect light and prefers warm temperatures, making it a popular choice for indoor spaces and tropical gardens.\nIt requires moderate watering, allowing the soil to dry slightly between waterings.\nWith its bold, architectural leaves and unique flowers, the Strelitzia adds a touch of elegance and exotic beauty to any environment.",
+      "height": "85 CM",
+      "potSize": "17 CM",
+      "light": "Bright",
+      "water": "Moderate",
+      "images": [
+        "./pics/bird/bird.jpg",
+        "./pics/bird/bird2.jpg",
+        "./pics/bird/bird3.jpg"
+      ]
+    },
+    {
+            "id": 2,
+            "name": "Swiss Cheese Plant (Monstera Deliciosa)",
+            "price": "32,99€",
+            "description": "The Monstera Deliciosa, also known as the Swiss Cheese Plant, is a tropical vine native to Central America. Its large, glossy leaves are known for their distinctive holes and splits, giving it a unique and decorative appearance.\n\nMonstera thrives in bright, indirect light but can tolerate low light conditions. It prefers warm temperatures and humid environments, making it an ideal plant for indoor spaces.\n\nIt requires moderate watering, allowing the soil to dry slightly between waterings. The Swiss Cheese Plant's bold foliage and easy-care nature make it a favorite among plant enthusiasts.\n\nWith its exotic look and fast-growing nature, the Monstera Deliciosa brings a touch of the tropics to any room.",
+            "height": "100 CM",
+            "potSize": "25 CM",
+            "light": "Particially shaded",
+            "water": "Moderate",
+            "images": [
+              "./pics/swiss/swiss.jpg",
+              "./pics/swiss/swiss2.jpg",
+              "./pics/swiss/swiss3.jpg"
+            ]
+    },
+    {
+        "id": 3,
+        "name": "Maranta 'Fascinator Tricolor'",
+        "price": "23,95€",
+        "description": "The Maranta Fascinator Tricolor, often referred to as the Red Prayer Plant, is a striking tropical plant native to the Brazilian rainforests. It is known for its vibrant, multicolored leaves with red veins and a unique pattern that gives it an eye-catching appearance.\n\nThis plant prefers bright, indirect light and thrives in warm, humid environments. The Maranta's leaves are known for their fascinating movement, folding up at night, which is why it's often called the 'Prayer Plant.'\n\nIt requires regular watering to keep the soil consistently moist, but avoid waterlogging. The Maranta Fascinator Tricolor is perfect for adding color and a sense of tranquility to any indoor space.\n\nWith its beautiful foliage and low-maintenance care, this plant is an excellent choice for both beginners and experienced plant lovers.",
+        "height": "20 CM",
+        "potSize": "15 CM",
+        "light": "Bright",
+        "water": "High",
+        "images": [
+          "./pics/maranta/maranta.jpg",
+          "./pics/maranta/maranta2.jpg",
+          "./pics/maranta/maranta3.jpg"
+        ]
+      }
+]
