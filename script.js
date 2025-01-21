@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Suchfilter
+// Suchleiste
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.searchbar'); // Suchfeld
     const plantCards = document.querySelectorAll('.plant-card'); // Produktkarten
@@ -80,4 +80,63 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+// Filter
+document.addEventListener("DOMContentLoaded", () => {
+    const plantCards = document.querySelectorAll(".plant-card");
+    const sizeFilters = document.querySelectorAll('input[name="size"]');
+    const familyFilters = document.querySelectorAll('input[name="family"]');
+    const lightFilters = document.querySelectorAll('input[name="light"]');
+    const waterFilters = document.querySelectorAll('input[name="water"]');
+
+    // Initialisiere den Filter-Status, falls nötig
+    function initializeFilters() {
+        sizeFilters.forEach(filter => {
+            console.log("Initial size filter:", filter.checked);
+        });
+        familyFilters.forEach(filter => {
+            console.log("Initial family filter:", filter.checked);
+        });
+        lightFilters.forEach(filter => {
+            console.log("Initial light filter:", filter.checked);
+        });
+        waterFilters.forEach(filter => {
+            console.log("Initial water filter:", filter.checked);
+        });
+    }
+
+    // Filterfunktion
+    function filterPlants() {
+        plantCards.forEach(card => {
+            const size = card.getAttribute('data-size').toLowerCase();
+            const family = card.getAttribute('data-family').toLowerCase();
+            const light = card.getAttribute('data-light').toLowerCase();
+            const water = card.getAttribute('data-water').toLowerCase();
+
+            const sizeMatch = Array.from(sizeFilters).some(input => input.checked && input.value.toLowerCase() === size);
+            const familyMatch = Array.from(familyFilters).some(input => input.checked && input.value.toLowerCase() === family);
+            const lightMatch = Array.from(lightFilters).some(input => input.checked && input.value.toLowerCase() === light);
+            const waterMatch = Array.from(waterFilters).some(input => input.checked && input.value.toLowerCase() === water);
+
+            if ((sizeFilters.length === 0 || sizeMatch) &&
+                (familyFilters.length === 0 || familyMatch) &&
+                (lightFilters.length === 0 || lightMatch) &&
+                (waterFilters.length === 0 || waterMatch)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Event-Listener für Checkboxen
+    sizeFilters.forEach(filter => filter.addEventListener('change', filterPlants));
+    familyFilters.forEach(filter => filter.addEventListener('change', filterPlants));
+    lightFilters.forEach(filter => filter.addEventListener('change', filterPlants));
+    waterFilters.forEach(filter => filter.addEventListener('change', filterPlants));
+
+    // Rufe initial die Filter-Logik auf
+    initializeFilters();
+    filterPlants();
 });
