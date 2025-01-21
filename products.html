@@ -73,23 +73,23 @@
             <div class="filter-section">
                 <p class="quicksand-regular">SIZE</p>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="size-xs" />
+                    <input type="checkbox" name="size" id="size-xs" value="XS" />
                     <label for="size-xs">XS</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="size-s" />
+                    <input type="checkbox" name="size" id="size-s" value="S"/>
                     <label for="size-s">S</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="size-m" />
+                    <input type="checkbox" name="size" id="size-m" value="M"/>
                     <label for="size-m">M</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="size-l" />
+                    <input type="checkbox" name="size" id="size-l" value="L"/>
                     <label for="size-l">L</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="size-xl" />
+                    <input type="checkbox" name="size" id="size-xl" value="XL"/>
                     <label for="size-xl">XL</label>
                 </div>
             </div>
@@ -98,19 +98,19 @@
             <div class="filter-section">
                 <p class="quicksand-regular">FAMILY</p>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="family-caladium" />
+                    <input type="checkbox" name="family" id="family-caladium" value="CALADIUM"/>
                     <label for="family-caladium">CALADIUM</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="family-drac" />
+                    <input type="checkbox" name="family" id="family-drac" value="DRACAENA"/>
                     <label for="family-drac">DRACAENA</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="family-monstera" />
+                    <input type="checkbox" name="family" id="family-monstera" value="MONSTERA"/>
                     <label for="family-monstera">MONSTERA</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="family-philo" />
+                    <input type="checkbox" name="family" id="family-philo" value="PHILODENDRON"/>
                     <label for="family-philo">PHILODENDRON</label>
                 </div>
             </div>
@@ -119,19 +119,19 @@
             <div class="filter-section">
                 <p class="quicksand-regular">LIGHT LOCATION</p>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="light-sunny" />
+                    <input type="checkbox" name="light" id="light-sunny" value="SUNNY"/>
                     <label for="light-sunny">SUNNY</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="light-bright" />
+                    <input type="checkbox" name="light" id="light-bright" value="BRIGHT"/>
                     <label for="light-bright">BRIGHT</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="light-shady" />
+                    <input type="checkbox" name="light" id="light-shady" value="SHADY"/>
                     <label for="light-shady">SHADY</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="light-part" />
+                    <input type="checkbox" name="light" id="light-part" value="PARTICIALLY SHADED"/>
                     <label for="light-part">PARTICIALLY SHADED</label>
                 </div>
             </div>
@@ -140,15 +140,15 @@
             <div class="filter-section">
                 <p class="quicksand-regular">WATER NEEDS</p>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="water-low" />
+                    <input type="checkbox" name="water" id="water-low" value="LOW" />
                     <label for="water-low">LOW</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="water-moderate" />
+                    <input type="checkbox" name="water" id="water-moderate" value="MODERATE"/>
                     <label for="water-moderate">MODERATE</label>
                 </div>
                 <div class="filter-checkbox">
-                    <input type="checkbox" id="water-high" />
+                    <input type="checkbox" name="water" id="water-high" value="HIGH" />
                     <label for="water-high">HIGH</label>
                 </div>
             </div>
@@ -161,7 +161,7 @@
         <section class="plant-grid" aria-label="plants">
                 
                 <!-- 1.Reihe --> 
-                <article class="plant-card">
+                <article class="plant-card" data-size="XL" data-family="STRELITZIA" data-light="BRIGHT" data-water="MODERATE">
                     <a href="bird-plant.html">
                         <img src="./pics/bird.jpg" alt="Bird of Paradise">
                     </a>
@@ -176,7 +176,7 @@
                     </div>
                 </article>
             
-                <article class="plant-card">
+                <article class="plant-card" data-size="L" data-family="MONSTERA" data-light="PARTICIALLY SHADED" data-water="MODERATE">
                     <a href="swiss.html" class="plant-link">
                         <img src="./pics/swiss.jpg" alt="Swiss Cheese Plant">
                     </a>
@@ -191,7 +191,7 @@
                     </div>
                 </article>
             
-                <article class="plant-card">
+                <article class="plant-card" data-size="S" data-family="MARANTA" data-light="BRIGHT" data-water="HIGH">
                     <a href="maranta.html" class="plant-link">
                         <img src="./pics/maranta.jpg" alt="Maranta">
                     </a>
@@ -208,7 +208,7 @@
 
 
                <!-- 2.Reihe --> 
-                <article class="plant-card">
+                <article class="plant-card" data-size="M" data-family="MONSTERA" data-light="PARTICIALLY SHADED" data-water="MODERATE">
                     <img src="./pics/mini.jpg" alt="Minima">
                     <p class="common-name">MONSTERA MINIMA</p>
                     <p class="scientific-name">RHAPHIDOPHORA TETRASPERMA</p>
@@ -221,7 +221,7 @@
                     </div>
                 </article>
 
-                <article class="plant-card">
+                <article class="plant-card" data-size="XS" data-family="CALADIUM" data-light="PARTICIALLY SHADED" data-water="MODERATE">
                     <img src="./pics/caladium.jpg" alt="paintedleaf">
                     <p class="common-name">PAINTED LEAF</p>
                     <p class="scientific-name">CALADIUM BICOLOR</p>
@@ -234,7 +234,7 @@
                     </div>
                 </article>
 
-                <article class="plant-card">
+                <article class="plant-card" data-size="L" data-family="DRACAENA" data-light="SHADY" data-water="LOW">
                     <img src="./pics/dracaena.jpg" alt="dragontree">
                     <p class="common-name">DRAGONTREE</p>
                     <p class="scientific-name">DRACAENA</p>
@@ -248,7 +248,7 @@
                 </article>
 
                 <!-- 3.Reihe --> 
-                <article class="plant-card">
+                <article class="plant-card" data-size="S" data-family="PHILODENDRON" data-light="BRIGHT" data-water="MODERATE">
                     <img src="./pics/philo.jpg" alt="imperial">
                     <p class="common-name">IMPERIAL RED</p>
                     <p class="scientific-name">PHILODENDRON</p>
@@ -261,7 +261,7 @@
                     </div>
                 </article>
 
-                <article class="plant-card">
+                <article class="plant-card" data-size="L" data-family="MONSTERA" data-light="BRIGHT" data-water="LOW">
                     <img src="./pics/deli.jpg" alt="deliciosa">
                     <p class="common-name">DELICIOSA VARIEGATED</p>
                     <p class="scientific-name">MONSTERA</p>
@@ -274,7 +274,7 @@
                     </div>
                 </article>
 
-                <article class="plant-card">
+                <article class="plant-card" data-size="XS" data-family="MONSTERA" data-light="BRIGHT" data-water="LOW">
                     <img src="./pics/thai.jpg" alt="thai">
                     <p class="common-name">THAI CONSTELLATION</p>
                     <p class="scientific-name">MONSTERA</p>
