@@ -58,3 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Bird of Paradise card not found.");
     }
 });
+
+// Suchfilter
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.searchbar'); // Suchfeld
+    const plantCards = document.querySelectorAll('.plant-card'); // Produktkarten
+
+    // Filterfunktion für die Suchleiste
+    searchInput.addEventListener('input', (e) => {
+        const searchText = e.target.value.toLowerCase(); // Suchtext (kleingeschrieben)
+        
+        plantCards.forEach(card => {
+            const commonName = card.querySelector('.common-name').textContent.toLowerCase(); // Allgemeiner Name
+            const scientificName = card.querySelector('.scientific-name').textContent.toLowerCase(); // Wissenschaftlicher Name
+            
+            // Prüfen, ob der Suchtext in einem der beiden Namen enthalten ist
+            if (commonName.includes(searchText) || scientificName.includes(searchText)) {
+                card.style.display = 'flex'; // Zeige passende Karten
+            } else {
+                card.style.display = 'none'; // Verstecke unpassende Karten
+            }
+        });
+    });
+});
