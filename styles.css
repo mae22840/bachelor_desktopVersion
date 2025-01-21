@@ -414,7 +414,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
     gap: 20px; /* Abstand zwischen den Karten */
-    margin-left: 300px;
+    margin-left: 300px; 
     padding: 20px;
     z-index: 1;
   }
@@ -447,6 +447,15 @@ body {
   .plant-card a {
     display: inline-block; /* Stellt sicher, dass nur der Inhalt des Links klickbar ist */
     text-decoration: none; /* Entfernt Standard-Text-Unterstreichungen */
+}
+
+.common-name {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.scientific-name{
+    font-family: 'Quicksand', sans-serif;
 }
   
   .plant-card .price-and-button {
