@@ -231,7 +231,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 500px;
+    width: 100%;
     height: 500px;
 }
 
