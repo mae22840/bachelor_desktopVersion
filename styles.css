@@ -523,7 +523,7 @@ body {
     height: 40px;
     width: 120px;
     text-align: center;
-    z-index: 900;
+    z-index: 1300;
 }
 
 .filter-button .filter-icon {
