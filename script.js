@@ -90,43 +90,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightFilters = document.querySelectorAll('input[name="light"]');
     const waterFilters = document.querySelectorAll('input[name="water"]');
 
-    // Initialisiere den Filter-Status, falls nötig
-    function initializeFilters() {
-        sizeFilters.forEach(filter => {
-            console.log("Initial size filter:", filter.checked);
-        });
-        familyFilters.forEach(filter => {
-            console.log("Initial family filter:", filter.checked);
-        });
-        lightFilters.forEach(filter => {
-            console.log("Initial light filter:", filter.checked);
-        });
-        waterFilters.forEach(filter => {
-            console.log("Initial water filter:", filter.checked);
-        });
-    }
-
     // Filterfunktion
     function filterPlants() {
         plantCards.forEach(card => {
+            // Attributwerte der Karte
             const size = card.getAttribute('data-size').toLowerCase();
             const family = card.getAttribute('data-family').toLowerCase();
             const light = card.getAttribute('data-light').toLowerCase();
             const water = card.getAttribute('data-water').toLowerCase();
-
-            const sizeMatch = Array.from(sizeFilters).some(input => input.checked && input.value.toLowerCase() === size);
-            const familyMatch = Array.from(familyFilters).some(input => input.checked && input.value.toLowerCase() === family);
-            const lightMatch = Array.from(lightFilters).some(input => input.checked && input.value.toLowerCase() === light);
-            const waterMatch = Array.from(waterFilters).some(input => input.checked && input.value.toLowerCase() === water);
-
-            if ((sizeFilters.length === 0 || sizeMatch) &&
-                (familyFilters.length === 0 || familyMatch) &&
-                (lightFilters.length === 0 || lightMatch) &&
-                (waterFilters.length === 0 || waterMatch)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+    
+            // Helper-Funktion für Filterlogik
+            const isMatch = (filters, value) => 
+                !Array.from(filters).some(input => input.checked) || 
+                Array.from(filters).some(input => input.checked && input.value.toLowerCase() === value);
+    
+            // Überprüfen, ob die Karte in allen Kategorien passt
+            const sizeMatch = isMatch(sizeFilters, size);
+            const familyMatch = isMatch(familyFilters, family);
+            const lightMatch = isMatch(lightFilters, light);
+            const waterMatch = isMatch(waterFilters, water);
+    
+            // Karte anzeigen oder ausblenden
+            card.style.display = sizeMatch && familyMatch && lightMatch && waterMatch ? 'block' : 'none';
         });
     }
 
