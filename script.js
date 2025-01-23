@@ -1,3 +1,56 @@
+// Quantity Button
+document.addEventListener("DOMContentLoaded", () => {
+    const plus = document.querySelector(".quantity-increase");
+    const minus = document.querySelector(".quantity-decrease");
+    const num = document.querySelector(".quantity-value");
+
+    if (!plus || !minus || !num) {
+        console.error("Ein oder mehrere Elemente wurden nicht gefunden.");
+        return;
+    }
+
+    let a = 1;
+
+    plus.addEventListener("click", () => {
+        a++;
+        a = a < 10 ? "0" + a : a;
+        num.textContent = a;
+        console.log(`Erhöht: ${a}`);
+    });
+
+    minus.addEventListener("click", () => {
+        if (a > 1) {
+            a--;
+            a = a < 10 ? "0" + a : a;
+            num.textContent = a;
+            console.log(`Verringert: ${a}`);
+        }
+    });
+});
+
+// Warenkorb Icon
+document.addEventListener("DOMContentLoaded", () => {
+    // Referenz zum Warenkorb-Zähler
+    const cartCountElement = document.getElementById("cart-count");
+    let cartCount = 0; // Startwert des Warenkorbs
+
+    // Den Button mit der Klasse "cart-button" auswählen
+    const addToCartButton = document.querySelector(".cart-button");
+
+    // Überprüfen, ob der Button existiert
+    if (!addToCartButton) {
+        console.error("Der Button mit der Klasse 'cart-button' wurde nicht gefunden!");
+        return;
+    }
+
+    // Event Listener für den Button hinzufügen
+    addToCartButton.addEventListener("click", () => {
+        cartCount++; // Zähler erhöhen
+        cartCountElement.textContent = cartCount; // Zähler im DOM aktualisieren
+        console.log(`Warenkorb-Zähler: ${cartCount}`); // Debugging-Ausgabe
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const filterButton = document.getElementById("filter-button");
     const filterContainer = document.querySelector(".filter-container");
