@@ -27,9 +27,9 @@
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1569bbf8b91dc68c07a75484a57f4b5bd793222dcca50c229861832f2f85a6e?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
                          alt="" role="presentation">
                 </button>
-                <button aria-label="Shopping cart" class="icon">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6f27be20078178ff283a519cc9780523337aa2f709740785d2cf22f37269eba7?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
-                         alt="" role="presentation">
+                <button aria-label="Shopping cart" class="iconCart">
+                    <img src="./pics/cart2.svg" alt="" role="presentation">
+                    <span id="cart-count">0</span>
                 </button>
             </div>
         </nav>
@@ -57,13 +57,9 @@
                     <div class="quantity-cart-container">
                         <!-- Quantity Selector -->
                         <div class="quantity-selector" role="group" aria-label="Quantity selector">
-                            <button class="quantity-decrease" aria-label="Decrease quantity">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/518182834acefe835d5408b20fd1140822c94dfe4900cfad95267bd3bf43296a?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="-" class="quantity-icon">
-                            </button>
-                            <span class="quantity-value" aria-live="polite">1</span>
-                            <button class="quantity-increase" aria-label="Increase quantity">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/23fd826ce06bea44ebed4a13771585a43d691c7d984a2657e8c6b9c036a199fa?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="+" class="quantity-icon">
-                            </button>
+                            <span class="quantity-decrease">-</span>
+                            <span class="quantity-value">01</span>
+                            <span class="quantity-increase">+</span>
                         </div>
                         <!-- Cart Button -->
                         <button class="cart-button" aria-label="Add item to shopping cart">
