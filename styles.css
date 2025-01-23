@@ -125,31 +125,59 @@ body {
 
 .nav-icons {
     display: flex;
-    gap: 26px;
+    gap: 16px; /* Abstand zwischen Icons */
+    align-items: center; /* Vertikale Ausrichtung */
 }
 
 .nav-icons .icon {
-    background-color: transparent; 
-    width: 30px;
-    height: 30px; 
-    border: none; 
-    padding: 0; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.nav-icons .icon img {
-    width: 30px; 
-    height: 30px; 
-    display: block; 
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
+    position: relative; /* Für den Zähler */
+    width: 30px; /* Einheitliche Breite */
+    height: 30px; /* Einheitliche Höhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    border: none; /* Kein Rahmen */
+    background-color: transparent; /* Kein Hintergrund */
+    padding: 0; /* Kein zusätzliches Padding */
 }
+
+.nav-icons .iconCart{
+    position: relative; /* Für den Zähler */
+    width: 50px; /* Einheitliche Breite */
+    height: 50px; /* Einheitliche Höhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Kein Rahmen */
+    background-color: transparent; /* Kein Hintergrund */
+    padding: 0; /* Kein zusätzliches Padding */
+}
+
+.nav-icons .icon img,
+.nav-icons .iconCart img {
+    width: 100%; /* Bild füllt den Container */
+    height: 100%;
+    display: block;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0px; /* Positionierung relativ zum Icon */
+    right: 0px; /* Positionierung relativ zum Icon */
+    background-color: var(--primary-color); /* Farbe des Kreises */
+    color: white; /* Farbe der Zahl */
+    width: 20px; /* Breite des Kreises */
+    height: 20px; /* Höhe des Kreises */
+    border-radius: 50%; /* Macht das Element zu einem Kreis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* Schriftgröße der Zahl */
+    font-weight: bold; /* Fettgedruckte Schrift */
+}
+
 
 .vertical-line {
     position: absolute; 
@@ -523,7 +551,7 @@ body {
     height: 40px;
     width: 120px;
     text-align: center;
-    z-index: 1300;
+    z-index: 900;
 }
 
 .filter-button .filter-icon {
@@ -553,10 +581,10 @@ body {
     text-align: left;
     gap: 20px; /* Abstand zwischen den Abschnitten */
     background-color: rgba(217, 217, 217, 0.26); /* Hintergrundfarbe mit Transparenz */
-    border: 1px solid #D9D9D9; /* Rahmenfarbe */
-    padding: 20px; /* Innenabstand */
-    width: 100%; /* Breite des Containers */
-    max-width: 280px; /* Maximale Breite */
+    border: 1px solid #D9D9D9; 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 280px; 
     position: absolute;
     display: none;
     z-index: 100;
@@ -747,8 +775,7 @@ body {
 
 .quantity-decrease,
 .quantity-increase {
-    width: 13px; /* Kleinere Symbolgröße */
-    height: 13px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -776,7 +803,7 @@ body {
 
   .cart-button {
     display: flex;
-    max-width: 150px;
+    max-width: 150px; 
     flex-direction: column;
     color: var(--primary-color);
     text-transform: uppercase;
