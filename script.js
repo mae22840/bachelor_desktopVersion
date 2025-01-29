@@ -1,4 +1,15 @@
+function singleAddToCart(){
+    // Referenz zur WarenkorbSumme
+    const cartCountElement = document.getElementById("cart-count");
+       
+    cartCountElement.textContent++;  
+    console.log('Warenkorb-Zähler incremented');
+}
+
+
 // Quantity Button
+var a = 1;
+
 document.addEventListener("DOMContentLoaded", () => {
     const plus = document.querySelector(".quantity-increase");
     const minus = document.querySelector(".quantity-decrease");
@@ -8,8 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Ein oder mehrere Elemente wurden nicht gefunden.");
         return;
     }
-
-    let a = 1;
 
     plus.addEventListener("click", () => {
         a++;
@@ -45,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event Listener für den Button hinzufügen
     addToCartButton.addEventListener("click", () => {
-        cartCount++; // Zähler erhöhen
+        cartCount= cartCount + parseInt(a); // Zähler erhöhen
         cartCountElement.textContent = cartCount; // Zähler im DOM aktualisieren
         console.log(`Warenkorb-Zähler: ${cartCount}`); // Debugging-Ausgabe
     });
